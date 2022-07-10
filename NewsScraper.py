@@ -22,7 +22,7 @@ class Scraper:
             thewriter.writerow(header)
 
             for tag in sp.find_all("a"):
-                encab = [periódicos ,]
+                encab = [newspaper ,]
                 url = tag.get("href")
                 if url is None:
                     continue
@@ -30,9 +30,9 @@ class Scraper:
                     encab.append(url)
                     thewriter.writerow(encab) 
 
-periódicos = input("Enter EXACT News URL :  ")
+newspaper = input("Enter EXACT News URL :  ")
 
-Scraper(periódicos).scrape() 
+Scraper(newspaper).scrape() 
 
 
 
